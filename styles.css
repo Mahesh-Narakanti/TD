@@ -1,0 +1,518 @@
+
+html{
+height: 100%;
+}
+body{
+width: 100%;
+margin: 0;
+font-family: poppins, Helvetica, sans-serif;
+font-weight: 400;
+background:#D8AA96;
+color:white;
+}
+.container{
+margin: 0 auto;
+width: 100%;
+max-width: 1140px;
+text-align: center;
+font-size: 0;
+}
+h2.title{
+position: relative;
+margin-bottom: 15px;
+padding-bottom: 15px;
+font-size: 30px;
+}
+h2.title::after{
+position: absolute;
+content: '';
+width: 50px;
+height: 3px;
+left: calc(50% - 25px);
+bottom: 0;
+background: #222222;
+}
+
+/* Button Css */
+
+.btn{
+position: relative;
+display: inline-block;
+margin: 15px;
+padding: 15px 30px;
+text-align: center;
+font-size: 16px;
+letter-spacing: 1px;
+text-decoration: none;
+color: #ffffff;
+background: mediumseagreen;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: ease-out 0.5s;
+}
+
+/* Slide 1 */
+.btn.btn-slide-1{
+box-shadow: inset 0 0 0 0 #303439;
+}
+.btn.btn-slide-1:hover{
+box-shadow: inset 0 100px 0 0 #303439;
+}
+
+/* Slide 2 */
+.btn.btn-slide-2{
+box-shadow: inset 0 0 0 0 #303439;
+}
+.btn.btn-slide-2:hover{
+box-shadow: inset 0 -100px 0 0 #303439;
+}
+* {
+    Margin: 0;
+    Padding: 0;
+    Box-Sizing: Border-Box;
+    Font-Family: "Poppins", Sans-Serif;
+}
+
+Body {
+    Overflow: Hidden;
+}
+
+Section {
+    Display: Flex;
+    Min-Height: 100vh;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Background: Linear-Gradient(To Bottom, #F7f7fe, #Dff1ff);
+}
+
+Section .Colour {
+    Position: Absolute;
+    Filter: Blur(150px);
+}
+
+Section .Colour:nth-Child(1) {
+    Top: -350px;
+    Width: 600px;
+    Height: 600px;
+    Background: #Bf4ad4;
+}
+
+Section .Colour:nth-Child(2) {
+    Left: 100px;
+    Width: 500px;
+    Height: 500px;
+    Bottom: -150px;
+    Background: #Ffa500;
+}
+
+Section .Colour:nth-Child(3) {
+    Right: 100px;
+    Bottom: 50px;
+    Width: 300px;
+    Height: 300px;
+    Background: #2b67f3;
+}
+
+.Box {
+    Position: Relative;
+}
+
+.Box .Square {
+    Position: Absolute;
+    Border-Radius: 10px;
+    Backdrop-Filter: Blur(5px);
+    Background: Rgba(255, 255, 255, 0.1);
+    Animation-Delay: Calc(-1s * Var(--I));
+    Animation: Animate 10s Linear Infinite;
+    Box-Shadow: 0 25px 45px Rgba(0, 0, 0, 0.1);
+    Border: 1px Solid Rgba(255, 255, 255, 0.5);
+    Border-Right: 1px Solid Rgba(255, 255, 255, 0.2);
+    Border-Bottom: 1px Solid Rgba(255, 255, 255, 0.2);
+}
+
+@Keyframes Animate {
+
+    0%,
+    100% {
+        Transform: TranslateY(-40px);
+    }
+
+    50% {
+        Transform: TranslateY(40px);
+    }
+}
+
+.Box .Square:nth-Child(1) {
+    Top: -50px;
+    Left: -60px;
+    Width: 100px;
+    Height: 100px;
+}
+
+.Box .Square:nth-Child(2) {
+    Z-Index: 2;
+    Top: 150px;
+    Left: -100px;
+    Width: 120px;
+    Height: 120px;
+}
+
+.Box .Square:nth-Child(3) {
+    Z-Index: 2;
+    Width: 80px;
+    Height: 80px;
+    Right: -50px;
+    Bottom: -60px;
+}
+
+.Box .Square:nth-Child(4) {
+    Left: 100px;
+    Width: 50px;
+    Height: 50px;
+    Bottom: -80px;
+}
+
+.Box .Square:nth-Child(5) {
+    Top: -80px;
+    Left: 140px;
+    Width: 60px;
+    Height: 60px;
+}
+
+.Container {
+    Width: 400px;
+    Display: Flex;
+    Min-Height: 400px;
+    Position: Relative;
+    Border-Radius: 10px;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Backdrop-Filter: Blur(5px);
+    Background: Rgba(255, 255, 255, 0.1);
+    Box-Shadow: 0 25px 45px Rgba(0, 0, 0, 0.1);
+    Border: 1px Solid Rgba(255, 255, 255, 0.5);
+    Border-Right: 1px Solid Rgba(255, 255, 255, 0.2);
+    Border-Bottom: 1px Solid Rgba(255, 255, 255, 0.2);
+}
+
+.Form {
+    Width: 100%;
+    Height: 100%;
+    Padding: 40px;
+    Position: Relative;
+}
+
+.Form H2 {
+    Color: #Fff;
+    Font-Size: 24px;
+    Font-Weight: 600;
+    Position: Relative;
+    Letter-Spacing: 1px;
+    Margin-Bottom: 40px;
+}
+
+.Form H2::Before {
+    Left: 0;
+    Width: 80px;
+    Height: 4px;
+    Content: "";
+    Bottom: -10px;
+    Background: #Fff;
+    Position: Absolute;
+}
+
+.Form .Input__box {
+    Width: 100%;
+    Margin-Top: 20px;
+}
+
+.Form .Input__box Input {
+    Width: 100%;
+    Color: #Fff;
+    Border: None;
+    Outline: None;
+    Font-Size: 16px;
+    Padding: 10px 20px;
+    Letter-Spacing: 1px;
+    Border-Radius: 35px;
+    Background: Rgba(255, 255, 255, 0.2);
+    Border: 1px Solid Rgba(255, 255, 255, 0.5);
+    Box-Shadow: 0 5px 15px Rgba(0, 0, 0, 0.05);
+    Border-Right: 1px Solid Rgba(255, 255, 255, 0.2);
+    Border-Bottom: 1px Solid Rgba(255, 255, 255, 0.2);
+}
+
+.Form::Placeholder {
+    Color: #Fff;
+}
+
+.Form .Input__box Input[Type="Submit"] {
+    Color: #666;
+    Cursor: Pointer;
+    Background: #Fff;
+    Max-Width: 100px;
+    Font-Weight: 600;
+    Margin-Bottom: 20px;
+}
+
+.Forget {
+    Color: #Fff;
+    Margin-Top: 5px;
+}
+
+.Forget A {
+    Color: #Fff;
+    Font-Weight: 600;
+    Text-Decoration: None;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');  
+ *{  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+  font-family: "Poppins" , sans-serif;  
+ }  
+ body{  
+  min-height: 100vh;  
+  width: 100%;  
+  background: #EEECEB;  
+ }  
+ footer{  
+  position: fixed;  
+  background: #ff0000;  
+  width: 100%;  
+  bottom: 0;  
+  left: 0;  
+ }  
+ footer::before{  
+  content: '';  
+  position: absolute;  
+  left: 0;  
+  top: 100px;  
+  height: 1px;  
+  width: 100%;  
+  background: #fff;  
+ }  
+ footer .content{  
+  max-width: 1250px;  
+  margin: auto;  
+  padding: 30px 40px 40px 40px;  
+ }  
+ footer .content .top{  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  margin-bottom: 50px;  
+ }  
+ .content .top .logo-details{  
+  color: #fff;  
+  font-size: 30px;  
+ }  
+ .content .top .logo-details:hover{  
+  color: #000;  
+  cursor: pointer;  
+ }
+.content .top .media-icons{  
+  display: flex;  
+ }  
+ .content .top .media-icons a{  
+  height: 40px;  
+  width: 40px;  
+  margin: 0 8px;  
+  border-radius: 50%;  
+  text-align: center;  
+  line-height: 40px;  
+  color: #fff;  
+  font-size: 17px;  
+  text-decoration: none;  
+  transition: all 0.4s ease;  
+ }  
+ .top .media-icons a:nth-child(1){  
+  background: #4267B2;  
+ }  
+ .top .media-icons a:nth-child(1):hover{  
+  color: #4267B2;  
+  background: #fff;  
+ }  
+ .top .media-icons a:nth-child(2){  
+  background: #1DA1F2;  
+ }  
+ .top .media-icons a:nth-child(2):hover{  
+  color: #1DA1F2;  
+  background: #fff;  
+ }  
+ .top .media-icons a:nth-child(3){  
+  background: #E1306C;  
+ }  
+ .top .media-icons a:nth-child(3):hover{  
+  color: #E1306C;  
+  background: #fff;  
+ }  
+ .top .media-icons a:nth-child(4){  
+  background: #0077B5;  
+ }  
+ .top .media-icons a:nth-child(4):hover{  
+  color: #0077B5;  
+  background: #fff;  
+ }  
+ .top .media-icons a:nth-child(5){  
+  background: #FF0000;  
+ }  
+ .top .media-icons a:nth-child(5):hover{  
+  color: #FF0000;  
+  background: #fff;  
+ }  
+ footer .content .link-boxes{  
+  width: 100%;  
+  display: flex;  
+  justify-content: space-between;  
+ }  
+ footer .content .link-boxes .box{  
+  width: calc(100% / 5 - 10px);  
+ }  
+ .content .link-boxes .box .link_name{  
+  color: #fff;  
+  font-size: 18px;  
+  font-weight: 400;  
+  margin-bottom: 10px;  
+  position: relative;  
+ }  
+ .link-boxes .box .link_name::before{  
+  content: '';  
+  position: absolute;  
+  left: 0;  
+  bottom: -2px;  
+  height: 2px;  
+  width: 35px;  
+  background: #fff;  
+ }  
+ .content .link-boxes .box li{  
+  margin: 6px 0;  
+  list-style: none;  
+ }  
+ .content .link-boxes .box li a{  
+  color: #fff;  
+  font-size: 14px;  
+  font-weight: 400;  
+  text-decoration: none;  
+  opacity: 0.8;  
+  transition: all 0.4s ease  
+ }  
+ .content .link-boxes .box li a:hover{  
+  opacity: 2;  
+  text-decoration: none;  
+ }  
+ .content .link-boxes .input-box{  
+  margin-right: 55px;  
+ }  
+ .link-boxes .input-box input{  
+  height: 40px;  
+  width: calc(100% + 55px);  
+  outline: none;  
+  border: 2px solid #AFAFB6;  
+  background: #140B5C;  
+  border-radius: 4px;  
+  padding: 0 15px;  
+  font-size: 15px;  
+  color: #fff;  
+  margin-top: 5px;  
+ }  
+ .link-boxes .input-box input::placeholder{  
+  color: #AFAFB6;  
+  font-size: 16px;  
+ }  
+ .link-boxes .input-box input[type="button"]{  
+  background: #fff;  
+  color: #140B5C;  
+  border: none;  
+  font-size: 18px;  
+  font-weight: 500;  
+  margin: 4px 0;  
+  opacity: 0.8;  
+  cursor: pointer;  
+  transition: all 0.4s ease;  
+ }  
+ .input-box input[type="button"]:hover{  
+  opacity: 1;  
+ }  
+ footer .bottom-details{  
+  width: 100%;  
+ background: #2c303a;  
+ }  
+ footer .bottom-details .bottom_text{  
+  max-width: 1250px;  
+  margin: auto;  
+  padding: 20px 40px;  
+  display: flex;  
+  justify-content: space-between;  
+ }  
+ .bottom-details .bottom_text span,  
+ .bottom-details .bottom_text a{  
+  font-size: 14px;  
+  font-weight: 300;  
+  color: #fff;  
+  opacity: 0.8;  
+  text-decoration: none;  
+ }  
+ .bottom-details .bottom_text a:hover{  
+  opacity: 1;  
+  text-decoration: underline;  
+ }  
+ .bottom-details .bottom_text a{  
+  margin-right: 10px;  
+ }
+
+                 /*Media query*/
+
+
+@media (max-width: 900px) {  
+  footer .content .link-boxes{  
+   flex-wrap: wrap;  
+  }  
+  footer .content .link-boxes .input-box{  
+   width: 40%;  
+   margin-top: 10px;  
+  }  
+ }  
+ @media (max-width: 700px){  
+  footer{  
+   position: relative;  
+  }  
+  .content .top .logo-details{  
+   font-size: 26px;  
+  }  
+  .content .top .media-icons a{  
+   height: 35px;  
+   width: 35px;  
+   font-size: 14px;  
+   line-height: 35px;  
+  }  
+  footer .content .link-boxes .box{  
+   width: calc(100% / 3 - 10px);  
+  }  
+  footer .content .link-boxes .input-box{  
+   width: 60%;  
+  }  
+  .bottom-details .bottom_text span,  
+  .bottom-details .bottom_text a{  
+   font-size: 12px;  
+  }  
+ }
+ @media (max-width: 520px){  
+  footer::before{  
+   top: 145px;  
+  }  
+  footer .content .top{  
+   flex-direction: column;  
+  }  
+  .content .top .media-icons{  
+   margin-top: 16px;  
+  }  
+  footer .content .link-boxes .box{  
+   width: calc(100% / 2 - 10px);  
+  }  
+  footer .content .link-boxes .input-box{  
+   width: 100%;  
+  }  
+ }
