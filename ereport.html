@@ -410,10 +410,15 @@ JS Options body {
             <label class="btn btn-secondary" for="option4">others</label>
             <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
               <div class='pets-photo'>
-                <button id='pets-upload'>
-                  <i class='fas fa-camera-retro'></i>
-                </button>
-                <label for='pets-upload'>Upload a photo</label>
+                <label for='file-input'>Upload a photo</label>
+                <input type="file" accept="image/*" id="file-input" />
+                <script>
+                  const fileInput = document.getElementById('file-input');
+                
+                  fileInput.addEventListener('change', (e) =>
+                    doSomethingWithFiles(e.target.files),
+                  );
+                </script>  
               </div>
             
            <!-- <div class='set'>
@@ -461,9 +466,9 @@ JS Options body {
             </div>
           </header>
           <footer>
-            <div class='set'>
-              <button id='back'>Back</button>
-              <button id='next'>Next</button>
+           <div class='set'>
+              <button id='back' onclick="location.href='citi.html';">Back</button>
+              <button id='next' onclick="location.href='tq.html';">Next</button>
             </div>
           </footer>
         </div>
