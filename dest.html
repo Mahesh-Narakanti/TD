@@ -14,6 +14,11 @@
     background-color: #D8AA96;
   }
 </style>
+              <script>
+            setTimeout(function(){
+              document.getElementById("code-block").style.display = "none";
+          },5000);
+          </script>
 </head>
 <body>
   <Div Class="Colour"></Div>
@@ -26,7 +31,7 @@
         <Div Class="Square" Style="--I: 3"></Div>
         <Div Class="Square" Style="--I: 4"></Div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Wlecome to Maps</a>
+        <a class="navbar-brand" href="#">Welcome to Maps</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,5 +48,18 @@
         </div>
       </nav>
       <center><iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d487183.089075106!2d78.194908!3d17.454071!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1sen!2sin!4v1674844023544!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
-</body>
+<div id="code-block">
+      <div class="container">
+        <div class="alert alert-danger" role="alert">
+          <h3><strong>Alert !
+                  There's an accident nearby
+                  will you help ?</strong></h3>
+          <br>
+          <br>
+          <button class="btn btn-success">Yes</button>
+          <button class="btn btn-danger">No</button>
+        </div>
+      </div>
+      </div>
+        </body>
 </html>
