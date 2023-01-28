@@ -13,11 +13,45 @@
   body{
     background-color: #D8AA96;
   }
+      .alert {
+  padding: 30px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 50%;
+}
+#alert-msg {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2dede; /* or any other color you prefer */
+  color: #a94442; /* or any other color you prefer */
+  text-align: center;
+  box-shadow: 2px 2px 5px #ccc; /* or any other value you prefer */
+  position: relative; /* this is to fix the position */
+}
 </style>
               <script>
-            setTimeout(function(){
-              document.getElementById("code-block").style.display = "none";
-          },5000);
+  var alertInterval;
+
+function startBlinking() {
+  alertInterval = setInterval(function() {
+    var el = document.getElementById("alert-msg");
+    el.style.display = (el.style.display == "none") ? "" : "none";
+  }, 1000);
+}
+
+document.getElementById("yes-btn").addEventListener("click", function(){
+  clearInterval(alertInterval);
+  document.getElementById("alert-msg").style.display = "none";
+});
+
+document.getElementById("no-btn").addEventListener("click", function(){
+  clearInterval(alertInterval);
+  document.getElementById("alert-msg").style.display = "none";
+});
+
+startBlinking();
           </script>
 </head>
 <body>
@@ -48,18 +82,16 @@
         </div>
       </nav>
       <center><iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d487183.089075106!2d78.194908!3d17.454071!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1sen!2sin!4v1674844023544!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
-<div id="code-block">
-      <div class="container">
-        <div class="alert alert-danger" role="alert">
-          <h3><strong>Alert !
-                  There's an accident nearby
-                  will you help ?</strong></h3>
-          <br>
-          <br>
-          <button class="btn btn-success">Yes</button>
-          <button class="btn btn-danger">No</button>
-        </div>
-      </div>
-      </div>
+<div class="container">
+  <div id="alert-msg" class="alert alert-danger" >
+    <strong>Alert !
+            There's an accident nearby
+            will you help ?</strong>
+    <br>
+    <br>
+    <button id="yes-btn" class="btn btn-success">Yes</button>
+    <button id="no-btn" class="btn btn-danger">No</button>
+  </div>
+</div>
         </body>
 </html>
